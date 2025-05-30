@@ -5,6 +5,20 @@ Loads configuration from environment variables with secure fallback handling
 
 import os
 from typing import Optional
+from dotenv import load_dotenv
+from pathlib import Path
+
+# Get the directory of this config file
+config_dir = Path(__file__).parent
+env_file = config_dir / '.env'
+
+# Load environment variables from .env file with explicit path
+if env_file.exists():
+    load_dotenv(env_file)
+    print(f"✅ Loaded environment variables from {env_file}")
+else:
+    print(f"⚠️  .env file not found at {env_file}")
+    load_dotenv()  # Try to load from current directory anyway
 
 
 class Config:

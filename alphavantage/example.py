@@ -3,6 +3,11 @@ Alpha Vantage API Example Usage
 Demonstrates various API calls and data retrieval using Alpha Vantage
 """
 
+import sys
+import os
+# Add parent directory to path to import modules
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from alphavantage.client import AlphaVantageClient
 import time
 from datetime import datetime, timedelta

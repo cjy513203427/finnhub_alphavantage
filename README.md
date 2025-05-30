@@ -173,7 +173,16 @@ python finnhub/example.py
 python main.py
 ```
 
-### 4. Getting Different Types of Data
+**Important:** All example programs require API keys to be configured. If you see import errors, make sure you:
+1. Run from the project root directory
+2. Have configured your API keys in `.env` file
+3. Have activated the correct conda environment
+
+### 4. Running from Any Directory
+
+If you need to run the examples from subdirectories, they automatically add the parent directory to the Python path for imports. However, it's recommended to run all programs from the project root directory.
+
+### 5. Getting Different Types of Data
 
 #### Alpha Vantage Examples
 

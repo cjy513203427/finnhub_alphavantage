@@ -1,10 +1,15 @@
 """
-Quick test script for Alpha Vantage API connection
-Tests basic API functionality before running full examples
+Alpha Vantage API Connection Test
+Quick test script to verify API connectivity and response
 """
 
-from alphavantage.client import AlphaVantageClient
 import sys
+import os
+# Add parent directory to path to import modules
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from alphavantage.client import AlphaVantageClient
+import json
 
 
 def test_api_connection():
